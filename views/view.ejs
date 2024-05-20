@@ -1,0 +1,23 @@
+<% layout("./template/syntex.ejs")%>
+<body>
+    <a href="/"><i class="fa-solid fa-backward"></i></a>
+    <div class="row m-4">
+        <div class="col-2 offset-2" >
+            <div class="card view-card" style="width: 60rem;">
+                <img src="<%= idvalue.image.url %>" class="card-img-top view-img" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title"><%= idvalue.title %></h4>
+                  <p class="card-text  view-pera"><%= idvalue.description %></p>
+                  <p class="card-text view-pera"><%= idvalue.price %> $/Day</p>
+                  <p class="card-text view-pera"><%= idvalue.location %></p>
+                  <p class="card-text view-pera"><%= idvalue.country %></p>
+                  <a href="/edit/<%=idvalue._id%>" class="btn btn-primary">Edit</a>
+                  <a href="/delete/<%=idvalue._id%>" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+
+    
+</body>

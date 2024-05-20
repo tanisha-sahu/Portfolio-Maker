@@ -1,0 +1,20 @@
+<% layout("./template/syntex.ejs")%>
+<body>
+    <div class="row m-5" >
+        <% for (value of data) { %>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="<%=value.image.url%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= value.title %></h5>
+                      <p><%= value.location %></p>
+                      <a href="/view/<%= value._id %>" class="btn btn-primary ind-btn">View More</a>
+                    </div>
+                  </div>
+            </div>
+        <% } %>
+    </div>
+    
+
+    
+</body>

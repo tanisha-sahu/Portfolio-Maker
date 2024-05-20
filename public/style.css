@@ -1,0 +1,44 @@
+.card-img-top{
+    height: 300px;
+}
+.card{
+    height: 30rem !important;
+    margin-bottom: 2rem;
+    border: 1px solid black !important;
+}
+.btn{
+    margin-top: 1rem !important;
+}
+.ind-btn{
+    position: absolute !important;
+    bottom: 2rem; 
+}
+
+.view-card{
+    height: 50rem !important;
+}
+
+.view-pera{
+    padding: 3px !important;
+    margin: 0% !important;
+    font-size: 1.2rem !important;
+}
+.view-img{
+    height: 33rem !important;
+}
+label{
+    font-weight: 600 !important;
+}
+.fa-backward{
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    font-size: 2rem;
+}
+form{
+    margin-top: 1rem !important;
+}
+.fa-compass{
+    font-size: 2rem !important;
+    color: rgb(188, 34, 34);
+}
