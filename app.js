@@ -65,11 +65,6 @@ app.use((req,res,next)=>{
 app.use("/home", listingRoute);  //Router of listing 
 app.use("/auth", authRoute); 
 
-//Default route error
-app.all("*",()=>{
-    throw new expError(404,"Page not found");
-})
-
 // Error handling middleware
 app.use((err,req,res,next)=>{
     const{status=400,message} = err;
