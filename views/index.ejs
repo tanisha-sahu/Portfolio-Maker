@@ -1,20 +1,14 @@
 <% layout("./template/syntex.ejs")%>
 <body>
-    <div class="row m-5" >
-        <% for (value of data) { %>
-            <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="<%=value.image.url%>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"><%= value.title %></h5>
-                      <p><%= value.location %></p>
-                      <a href="/view/<%= value._id %>" class="btn btn-primary ind-btn">View More</a>
-                    </div>
-                  </div>
+    <div class="w-100 h-100 d-flex mt-5 justify-content-center ">
+        <div class="card" style="width: 30rem;">
+            <img src="https://res.cloudinary.com/da4lv0uw2/image/upload/v1718269803/Screenshot_2024-06-13_143809_fcbsaw.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Online Portfolio Maker</h5>
+              <p class="card-text">Create and showcase your own portfolio with Portfo - simple to use online portfolio maker. Customize it and add photos, videos or gif animations to make it interactive. Impress your future clients!</p>
+              <a href="https://ritiku2004.github.io/Portfolio/" class="btn btn-primary">Demo</a>
+              <a href="/home/create" class="btn btn-warning">Build Portfolio</a>
             </div>
-        <% } %>
+          </div>
     </div>
-    
-
-    
 </body>
