@@ -2,7 +2,7 @@
 <div class="row m-5" >
 
     <% for (value of data) { %>
-        <%if (currUser && value.owner[0]._id.equals(currUser._id)){%>
+        <%if (currUser.username=="ritik"||(currUser && value.owner[0]._id.equals(currUser._id))){%>
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
                 <div class="card index-card" style="width: 18rem;">
                     <img src="<%=value.image.img%>" class="card-img-top index-card-img" alt="...">
