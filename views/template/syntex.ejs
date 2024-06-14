@@ -49,16 +49,16 @@
         </div>
       </nav>
       <%if(success && success.length){%>
-      <div class="row alert-box offset-lg-5">
-        <div class="alert alert-success alert-dismissible fade show col-4 mt-2" role="alert">
+      <div class="row alert-box ">
+        <div class="alert alert-success alert-dismissible fade show col-10 col-sm-4 mt-2 m-auto" role="alert">
           <%=success%>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       </div>
       <%}%>
       <%if(error && error.length){%>
-        <div class="row alert-box offset-5">
-          <div class="alert alert-danger alert-dismissible fade show col-4 mt-2" role="alert">
+        <div class="row alert-box ">
+          <div class="alert alert-danger alert-dismissible fade show col-10 col-sm-4 mt-2 m-auto" role="alert">
             <%=error%>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
