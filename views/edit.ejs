@@ -1,0 +1,362 @@
+<% layout("./template/syntex.ejs")%>
+<body >
+    <h1 style="text-align: center;">Edit</h1>
+    <div class="row  p-0 container m-auto">
+        <div class="col-lg-8 col-sm-10  m-auto">
+            <form action="/home/edit/<%=idvalue._id%>"  method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name:</label>
+                <input type="text" class="form-control border-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  name="name" placeholder="Write your name here" value="<%=idvalue.name%>"  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Enter your name.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Profession:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="profession"
+                  placeholder="Write your profession here" value="<%=idvalue.profession%>" required>
+                <div class="invalid-feedback">
+                  Please Enter your Profession.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Headline:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="headline"
+                  placeholder="Write headline here" value="<%=idvalue.headline%>" required>
+                <div class="invalid-feedback">
+                  Please Enter Headline.
+                </div>
+              </div>
+    
+              <div class="mb-3">
+                <span>Old image :</span><br>
+                <img src="<%=idvalue.image.img%>" width="200px" alt="preview"><br>
+                <label for="exampleInputPassword1" class="form-label">Upload Image:</label>
+                <input type="file" class="form-control border-2" id="exampleInputPassword1"
+                  placeholder="Write image URL here" name="img" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">E-Mail:</label>
+                <input type="mail" class="form-control border-2" id="exampleInputPassword1" name="mail"
+                  placeholder="Write your mail here" value="<%=idvalue.mail%>" required>
+                <div class="invalid-feedback">
+                  Please Enter E-mail.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Social app link:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="social_url"
+                  placeholder="ex- telegram link or whatsapp link" value="<%=idvalue.social_url%>" required>
+                <div class="invalid-feedback">
+                  Please Enter link.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">linkdIn</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="linkdin"
+                  placeholder="linkdIn profile link" value="<%=idvalue.linkdin%>" required>
+                <div class="invalid-feedback">
+                  Please Enter linkedIn.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Github:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="github"
+                  placeholder="Write github url here" value="<%=idvalue.github%>" required>
+                <div class="invalid-feedback">
+                  Please Enter Github link
+                </div>
+              </div>
+              <hr>
+              <h3>Education -</h3>
+              <div class="row">
+                <h6>1.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Year:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="year1"
+                    placeholder="Write year here" value="<%=idvalue.year1%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Title:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="title1"
+                    placeholder="Write Title here" value="<%=idvalue.title1%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descripton:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="desc1"
+                  placeholder="Write description here" value="<%=idvalue.desc1%>" required>
+                <div class="invalid-feedback">
+                  Please Enter field.
+                </div>
+              </div>
+              <div class="row">
+                <h6>2.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Year:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="year2"
+                    placeholder="Write Year here" value="<%=idvalue.year2%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter filed.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Title:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="title2"
+                    placeholder="Write Title here" value="<%=idvalue.title2%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descripton:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="desc2"
+                  placeholder="Write dedication here" value="<%=idvalue.desc2%>" required>
+                <div class="invalid-feedback">
+                  Please Enter field.
+                </div>
+              </div>
+              <div class="row">
+                <h6>3.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Year:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="year3"
+                    placeholder="Write year here" value="<%=idvalue.year3%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Title:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="title3"
+                    placeholder="Write Title here" value="<%=idvalue.title3%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descripton:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="desc3"
+                  placeholder="Write dedication here" value="<%=idvalue.desc3%>" required>
+                <div class="invalid-feedback">
+                  Please Enter field.
+                </div>
+              </div>
+              <hr>
+              <h3>Experiance or projects -</h3>
+              <div class="row">
+                <h6>1.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Year:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="year4"
+                    placeholder="Write year here" value="<%=idvalue.year4%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Title:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="title4"
+                    placeholder="Write Title here" value="<%=idvalue.title4%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descripton:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="desc4"
+                  placeholder="Write description here" value="<%=idvalue.desc4%>" required>
+                <div class="invalid-feedback">
+                  Please Enter field.
+                </div>
+              </div>
+              <div class="row">
+                <h6>2.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Year:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="year5"
+                    placeholder="Write Year here" value="<%=idvalue.year5%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter filed.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Title:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="title5"
+                    placeholder="Write Title here" value="<%=idvalue.title5%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descripton:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="desc5"
+                  placeholder="Write dedication here" value="<%=idvalue.desc5%>" required>
+                <div class="invalid-feedback">
+                  Please Enter field.
+                </div>
+              </div>
+              <div class="row">
+                <h6>3.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Year:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="year6"
+                    placeholder="Write year here" value="<%=idvalue.year6%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Title:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="title6"
+                    placeholder="Write Title here" value="<%=idvalue.title6%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descripton:</label>
+                <input type="text" class="form-control border-2" id="exampleInputPassword1" name="desc6"
+                  placeholder="Write dedication here" value="<%=idvalue.desc6%>" required>
+                <div class="invalid-feedback">
+                  Please Enter field.
+                </div>
+              </div>
+              <hr>
+              <h3>professional Skills -</h3>
+              <div class="row">
+                <h6>1.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Knowledge:</label>
+                  <input type="number" class="form-control border-2" id="exampleInputPassword1" name="knw1"
+                    placeholder="Write percentage here" min="1" max="100" value="<%=idvalue.knw1%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Skill name:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="skill1"
+                    placeholder="Write Title here" value="<%=idvalue.skill1%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <h6>2.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">knowledge:</label>
+                  <input type="number" class="form-control border-2" id="exampleInputPassword1" name="knw2"
+                    placeholder="Write percentage here" min="1" max="100" value="<%=idvalue.knw2%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter filed.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Skill name:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="skill2"
+                    placeholder="Write Title here" value="<%=idvalue.skill2%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <h6>3.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">knowledge:</label>
+                  <input type="number" class="form-control border-2" id="exampleInputPassword1" name="knw3"
+                    placeholder="Write percentage here" min="1" max="100" value="<%=idvalue.knw3%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Skill name:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="skill3"
+                    placeholder="Write skill here" value="<%=idvalue.skill3%>" required> 
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <h3>Soft Skills -</h3>
+              <div class="row">
+                <h6>1.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">Knowledge:</label>
+                  <input type="number" class="form-control border-2" id="exampleInputPassword1" name="knw4"
+                    placeholder="Write percentage here" min="1" max="100" value="<%=idvalue.knw4%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Skill name:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="skill4"
+                    placeholder="Write Title here"  value="<%=idvalue.skill4%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <h6>2.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">knowledge:</label>
+                  <input type="number" class="form-control border-2" id="exampleInputPassword1" name="knw5"
+                    placeholder="Write percentage here" min="1" max="100" value="<%=idvalue.knw5%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter filed.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Skill name:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="skill5"
+                    placeholder="Write Title here" value="<%=idvalue.skill5%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <h6>3.</h6>
+                <div class="mb-3 col-12 col-sm-3">
+                  <label for="exampleInputPassword1" class="form-label">knowledge:</label>
+                  <input type="number" class="form-control border-2" id="exampleInputPassword1" name="knw6"
+                    placeholder="Write percentage here" min="1" max="100" value="<%=idvalue.knw6%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+                <div class="mb-3 col-12 col-sm-9">
+                  <label for="exampleInputPassword1" class="form-label">Skill name:</label>
+                  <input type="text" class="form-control border-2" id="exampleInputPassword1" name="skill6"
+                    placeholder="Write skill here" value="<%=idvalue.skill6%>" required>
+                  <div class="invalid-feedback">
+                    Please Enter field.
+                  </div>
+                </div>
+              </div>
+                <button type="submit" class="btn btn-primary mb-3">Edit</button>
+              </form>
+        </div>
+    </div>
+</body>
